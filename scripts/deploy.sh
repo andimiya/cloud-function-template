@@ -1,13 +1,12 @@
 #!/bin/bash
 
-# Extract the value of FUNCTION_NAME from constants.js
-# FUNCTION_NAME=$(sed -n 's/const FUNCTION_NAME = "\(.*\)";/\1/p' constants.js)
-
-gcloud functions deploy 'hello-node-function' \
+# Update this FUNCTION_NAME to your own function name
+gcloud functions deploy 'FUNCTION_NAME' \
   --gen2 \
   --runtime=nodejs20 \
   --region=us-east1 \
   --source=. \
   --entry-point=helloGET \
-  --trigger-http \
+  # Update this BUCKET_NAME to your own bucket
+  --trigger-bucket=BUCKET_NAME \
   --allow-unauthenticated
