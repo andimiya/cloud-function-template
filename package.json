@@ -6,8 +6,8 @@
   "scripts": {
     "start": "npx @google-cloud/functions-framework --target=helloGET",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "./scripts/deploy.sh",
-    "logs": "./scripts/logs.sh"
+    "deploy": "sh ./scripts/deploy.sh",
+    "logs": "sh ./scripts/logs.sh"
   },
   "author": "",
   "license": "ISC",
