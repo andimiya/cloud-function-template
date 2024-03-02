@@ -7,11 +7,18 @@
     "start": "npx @google-cloud/functions-framework --target=helloGET",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "sh ./scripts/deploy.sh",
-    "logs": "sh ./scripts/logs.sh"
+    "logs": "sh ./scripts/logs.sh",
+    "watch": "npm-watch start"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@google-cloud/functions-framework": "^3.3.0"
+  },
+  "watch": {
+    "start": "*.js"
+  },
+  "devDependencies": {
+    "npm-watch": "^0.11.0"
   }
 }
